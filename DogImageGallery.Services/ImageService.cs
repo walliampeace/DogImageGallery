@@ -21,7 +21,9 @@ namespace DogImageGallery.Services
         }
         public GalleryImage GetById(int id)
         {
-            return _ctx.DogImages.Find(id);
+            return GetAll()
+            .Where(i => i.Id == id)
+            .FirstOrDefault();
         }
         public IEnumerable<GalleryImage> GetWithTag(string tag)
         {
