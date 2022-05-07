@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogImageGallery", "DogImage
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DagImageGallery.Data", "DagImageGallery.Data\DagImageGallery.Data.csproj", "{550DB05B-C937-4E2F-BB5E-DA05F37265BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogImageGallery.Services", "DogImageGallery.Services\DogImageGallery.Services.csproj", "{BAF7AE5E-15AE-48CD-AE3C-448BFC67DCF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{550DB05B-C937-4E2F-BB5E-DA05F37265BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{550DB05B-C937-4E2F-BB5E-DA05F37265BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{550DB05B-C937-4E2F-BB5E-DA05F37265BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAF7AE5E-15AE-48CD-AE3C-448BFC67DCF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF7AE5E-15AE-48CD-AE3C-448BFC67DCF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF7AE5E-15AE-48CD-AE3C-448BFC67DCF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF7AE5E-15AE-48CD-AE3C-448BFC67DCF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

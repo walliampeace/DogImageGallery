@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DagImageGallery.Data\DagImageGallery.Data.csproj" />
+    <ProjectReference Include="..\DogImageGallery.Services\DogImageGallery.Services.csproj" />
   </ItemGroup>
 
 </Project>

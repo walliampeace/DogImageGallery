@@ -1,4 +1,5 @@
 using DagImageGallery.Data;
+using DogImageGallery.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,7 @@ namespace DogImageGallery
         {
             services.AddDbContext<DogImageGalleryDbContext>(x =>
                 x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IImage, ImageService>();
             services.AddMvc();
             services.AddControllersWithViews();
         }
