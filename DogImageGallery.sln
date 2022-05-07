@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogImageGallery", "DogImageGallery\DogImageGallery.csproj", "{761ADF1D-A3E4-4747-ADB6-765389D7AE3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DagImageGallery.Data", "DagImageGallery.Data\DagImageGallery.Data.csproj", "{550DB05B-C937-4E2F-BB5E-DA05F37265BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{761ADF1D-A3E4-4747-ADB6-765389D7AE3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{761ADF1D-A3E4-4747-ADB6-765389D7AE3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{761ADF1D-A3E4-4747-ADB6-765389D7AE3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{761ADF1D-A3E4-4747-ADB6-765389D7AE3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{550DB05B-C937-4E2F-BB5E-DA05F37265BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550DB05B-C937-4E2F-BB5E-DA05F37265BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550DB05B-C937-4E2F-BB5E-DA05F37265BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550DB05B-C937-4E2F-BB5E-DA05F37265BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2004A0E2-F500-441A-A971-749769470AE5}
+	EndGlobalSection
+EndGlobal
