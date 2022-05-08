@@ -1,16 +1,15 @@
+using Azure.Storage.Blobs;
 using DagImageGallery.Data;
+using DagImageGallery.Data.Models;
 using DogImageGallery.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace DogImageGallery
 {
@@ -31,6 +30,18 @@ namespace DogImageGallery
             services.AddScoped<IImage, ImageService>();
             services.AddMvc();
             services.AddControllersWithViews();
+            services.AddScoped(x => new BlobServiceClient(Configuration.GetValue<string>("AzureStorageConnectionString")));
+            services.AddIdentity<AppUser, IdentityRole<Guid>>()
+              .AddEntityFrameworkStores<DogImageGalleryDbContext>()
+              .AddSignInManager<SignInManager<AppUser>>()
+              .AddDefaultTokenProviders();
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/User/Login";
+            });
+
+            services.AddAuthentication();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
