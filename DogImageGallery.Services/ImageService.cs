@@ -20,7 +20,11 @@ namespace DogImageGallery.Services
         public IEnumerable<GalleryImage> GetAll()
         {
             return _ctx.DogImages
-                .Include(img => img.Tags);
+                .AsNoTracking()
+                .Include(i => i.Tags)
+                .OrderByDescending(i => i.Created)
+                .ToList();
+            //.Include(img => img.Tags);
         }
         public GalleryImage GetById(int id)
         {
@@ -40,7 +44,53 @@ namespace DogImageGallery.Services
             var blobClient = storageAccount.CreateCloudBlobClient();
             return blobClient.GetContainerReference(containerName);
         }
+        public List<ImageTag> ParseTags(string tags)
+        {
+            return tags.Split(", ")
+              .Select(tag => new ImageTag
+              {
+                  Description = tag
+              }).ToList();
+        }
+        // Only call down a range of images
+        public IEnumerable<GalleryImage> Range(int skip, int take)
+        {
+            return _ctx.DogImages
+                    .Include(i => i.Tags)
+                    .OrderByDescending(i => i.Created)
+                    .Skip(skip)
+                    .Take(take)
+                    .ToList();
+        }
+        public IEnumerable<GalleryImage> GetAllWithPaging(int pageNumber, int pageSize)
+        {
+            int skip = pageSize * (pageNumber - 1);
+            int pageCount = _ctx.DogImages.Count();
+            int capacity = skip + pageSize;
+            bool hasNext = pageCount > capacity;
 
+            return _ctx.DogImages
+                    .Include(i => i.Tags)
+                    .OrderByDescending(i => i.Created)
+                    .Skip(skip)
+                    .Take(pageSize)
+                    .ToList();
+        }
+        public void UpdateImage(GalleryImage changeImage)
+        {
+            _ctx.Entry(changeImage).State = EntityState.Modified;
+            _ctx.SaveChanges();
+        }
+
+        public void DeleteImage(int id)
+        {
+            var image = _ctx.DogImages
+                .Include(i => i.Tags)
+                .FirstOrDefault(i => i.Id == id);
+
+            _ctx.DogImages.Remove(image);
+            _ctx.SaveChanges();
+        }
         public async Task SetImage(string title, string tags, Uri uri)
         {
             // create reference to SQL database
@@ -54,14 +104,6 @@ namespace DogImageGallery.Services
 
             _ctx.Add(image);
             await _ctx.SaveChangesAsync();
-        }
-        public List<ImageTag> ParseTags(string tags)
-        {
-            return tags.Split(", ")
-              .Select(tag => new ImageTag
-              {
-                  Description = tag
-              }).ToList();
         }
     }
 }
