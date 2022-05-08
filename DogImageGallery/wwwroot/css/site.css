@@ -1,7 +1,4 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-.gallery-content {
+﻿.gallery-content {
     padding: 24px;
 }
 
@@ -25,71 +22,123 @@ for details on configuring this project to bundle and minify static web assets. 
     box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+.gallery-image-small {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 130px;
+    height: 130px;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+.gallery-image-container-small {
+    padding: 4px;
+    background: #fff;
+    border-radius: 1px;
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    margin: 6px;
+    position: relative;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.image-detail {
+    padding: 12px;
+    border-radius: 2px;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.image-detail-meta {
+    padding: 12px;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.btn-file {
+    margin: 6px;
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+#upload-form {
+    padding: 60px;
+    margin: auto;
+    width: 50%;
 }
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+.upload-container {
+    padding: 2%;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
+.drop-shadow {
+    box-shadow: 0 10px rgba(0, 0, 0, 0.2), 0 5px 5px;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
 }
