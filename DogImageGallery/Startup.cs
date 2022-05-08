@@ -68,7 +68,7 @@ namespace DogImageGallery
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Gallery}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
