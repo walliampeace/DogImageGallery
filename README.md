@@ -1,7 +1,7 @@
 # Dog Image Gallery App Based on Azure Blob Storage
 After run the program
 The main page:
-![image](https://user-images.githubusercontent.com/59054117/174923039-34db857c-1f94-49d2-b6a5-aeb21e2cec77.png)
+![image](https://user-images.githubusercontent.com/59054117/174923381-81f3858e-eb33-40fb-b6b9-2da8c9f71a53.png)
 Login page:
 ![image](https://user-images.githubusercontent.com/59054117/174923100-7ec5a1d1-f008-4b26-8720-d47db7e5d616.png)
 Image Gallery page:
