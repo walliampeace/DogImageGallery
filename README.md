@@ -1,4 +1,5 @@
 # Dog Image Gallery App Based on Azure Blob Storage
+The program is based on .Netcore
 After run the program
 The main page:
 ![image](https://user-images.githubusercontent.com/59054117/174923381-81f3858e-eb33-40fb-b6b9-2da8c9f71a53.png)
